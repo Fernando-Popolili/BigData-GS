@@ -1,0 +1,9 @@
+.env
+logs/
+config/
+plugins/
+chegada/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.tmp
