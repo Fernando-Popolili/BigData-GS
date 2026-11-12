@@ -45,3 +45,16 @@ python -m pytest tests
 ## Segurança
 
 Nenhuma chave, senha ou dado pessoal real neste repositório. Configurações sensíveis ficam em Airflow Variables.
+
+## Databricks (Bronze, Prata e Ouro)
+
+Requer uma conta Databricks Free Edition (serverless).
+
+1. Crie o volume `workspace.gs.chegada` com as pastas `clima` e `carrinho`.
+2. Envie os arquivos de `chegada/` ao Volume em 2 lotes, de dias diferentes
+   (lote 1: 01 a 06/11; lote 2: 07 a 11/11).
+3. Importe os notebooks de `databricks/` e execute na ordem:
+   - `01_bronze.py`: Auto Loader incremental (rode após o lote 1, de novo sem novos arquivos e após o lote 2, trocando `ETAPA`)
+   - `02_prata.py`: tipos, MERGE e 3 regras de qualidade
+   - `03_ouro.py`: modelo estrela, LGPD e as 5 consultas SQL
+4. Crie o painel (Dashboards) lendo `workspace.gs.ouro_status_zona`.
