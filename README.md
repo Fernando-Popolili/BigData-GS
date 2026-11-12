@@ -8,7 +8,11 @@ Carrinho autônomo que faz a ronda do galpão avícola, mede calor e qualidade d
 
 | Nome completo | RM |
 |---|---|
-| (preencher) | (preencher) |
+| Fernando Popolili Lameira Pires | RM99919 |
+| Lucas Palamartschuk de Toledo   | RM97913 |
+| Augusto Fisco Milreu            | RM98245 |
+| David Guilherme Barchin Denunci | RM98603 |
+| Matheus Zanardi                 | RM98832 |
 
 ## Arquitetura
 
@@ -37,17 +41,6 @@ bash scripts/setup_airflow.sh
 pip install pytest requests
 python -m pytest tests
 ```
-
-## Status
-
-- [x] Passo 1: contrato de dados
-- [x] Passo 2: gerador de leituras simuladas
-- [x] Passo 3: DAG do Airflow
-- [ ] Passo 4: upload ao Volume do Databricks (2 lotes)
-- [ ] Passo 5: Bronze
-- [ ] Passo 6: Prata
-- [ ] Passo 7: Ouro e 5 consultas SQL
-- [ ] Passo 8: LGPD e contrato com o MVP
 
 ## Segurança
 
